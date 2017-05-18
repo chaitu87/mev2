@@ -8,8 +8,34 @@ module.exports = function(app) {
     app.post('/login', auth.login);
     app.get('/logout', auth.logout);
     app.get('/login', controllers.users.getLogin);
+    app.get('/', function(req, res) {
+        res.render('index', { currentUser: req.user });
+    });
+    app.get('/projects', function(req, res, next) {
+        res.render('projects', {
+            title: "Projects"
+        });
+    });
+    app.get('/project/troops', function(req, res, next) {
+        res.render('projects/troops/index', {
+            title: "Troops"
+        });
+    });
+    app.get('/project/troops/preview', function(req, res, next) {
+        res.render('projects/troops/preview', {
+            title: "Troops"
+        });
+    });
+    app.get('/project/web-presentation', function(req, res, next) {
+        res.render('projects/web-presentation/index', {
+            title: "Web Presentation"
+        });
+    });
+    app.get('/snippets', function(req, res, next) {
+        res.render('snippets');
+    });
 
-    app.get('/', function (req, res) {
-        res.render('index', {currentUser: req.user});
+    app.get('/snippet/webworker', function(req, res, next) {
+        res.render('snippets/webworker');
     });
 };
