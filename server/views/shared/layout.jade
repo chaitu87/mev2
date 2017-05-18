@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width')
+		title= title
+		block css
+			link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Titillium+Web')
+			link(rel="stylesheet" href="/lib/tether/dist/css/tether.css")
+			link(rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css")
+			link(rel="stylesheet" href="/css/app.css")
+	body(ng-app="myApp")
+		.headercon
+			.container
+				.row
+					.col-md-6
+						.logo
+							a(href="/") CHAITHANYA PADI
+					.col-md-6.text-right
+						button.btn.btn-default.btn-toggle.hidden-sm-up
+							span.fa.fa-bars
+						ul.hidden-sm-down
+							li
+								a(href="/projects") Projects
+							li
+								a(href="/snippets") Snippets
+							li
+								a(href="/articles") Articles
+							li
+								a(href="/contact") Contact
+		.maincontent
+			block main-content
+		#sidebar
+			ul
+				li
+					a(href="/projects") Projects
+				li
+					a(href="/snippets") Snippets
+				li
+					a(href="/articles") Articles
+				li
+					a(href="/contact") Contact
+		include scripts

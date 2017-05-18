@@ -1,0 +1,52 @@
+extends ../../layout
+append css
+	link(rel='stylesheet', href='../../css/snippets/webworker.css')
+append js
+	script(src='../../js/projects/troops/app.js')
+block content
+	.projects
+		.container
+			.row
+				.col-xs-12
+					.row.flex-items-xs-middle
+						.col-xs-6
+							h1 Troops
+							p Multi-platform Streaming Framework
+						.col-xs-6.text-xs-right
+							a.btn.btn-primary(href="/project/troops/preview") Preview 
+								span.fa.fa-link
+			.row.description
+				.col-xs-12
+					p This is an attempt to use Internet as a replacement to bluetooth, other communication channels and create a meta-communication platform for multimedia. The end goal is to stream content to any associated device in realtime. These devices can be your mobile, tv, speakers and also other peoples devices. What I am trying to achieve here is eliminate any all intermediary protocols and adopt WebRtc as the universal adapter.
+					h3 Technology Stack
+					ul
+						li
+							a(href="https://nodejs.org/en/", target="_blank") NodeJs
+						li
+							a(href="https://www.mongodb.com/", target="_blank") MongoDB
+						li
+							a(href="https://www.ejabberd.im/", target="_blank") Ejabberd
+						li
+							a(href="http://www.schillmania.com/projects/soundmanager2/", target="_blank") SoundManager2
+							span.help (for media playback on modern browsers)
+					h3 Milestones
+					ul
+						li.subhead Proof of Concept using a music player on browsers
+						ul.internal
+							li.subsubhead Integration of Music Player
+							ul.internal
+								li Bootstrap with Jquery, HowlerJs 
+									span.fa.fa-check
+								li Server integration with Ejabberd
+								li Create music player
+								li Authenticate users
+								li Ability to add friends & devices
+								li Ability to know their presence
+								li Broadcast audio file to all the peers
+								li Once broadcast is done, play the downloaded stream
+								li Play is sync with other devices
+								li Periodic signal broadcast to keep the sync
+						li.subhead Release 1.0 
+							span.fa.fa-flag
+
+

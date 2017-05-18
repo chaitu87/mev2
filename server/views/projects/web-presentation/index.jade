@@ -1,0 +1,65 @@
+extends ../../layout
+append css
+	link(rel='stylesheet', href='../../components/owl.carousel/dist/assets/owl.carousel.min.css')
+	link(rel='stylesheet', href='../../css/projects/web-presentation/style.css')
+append js
+	script(src="../../components/owl.carousel/dist/owl.carousel.min.js")
+	script(src="//cdn.pubnub.com/sdk/javascript/pubnub.4.1.1.min.js")
+	script(src="../../js/jquery.ba-throttle-debounce.min.js")
+	script(src='../../js/projects/web-presentation/app.js')
+block content
+	.webpresentation
+		.container
+			.row
+				.col-xs-12
+					.owl-carousel
+						.text-slide.text-xs-center
+							h3 Hi
+							h5 I'm Tro
+							p Description: A twitter friendly headline
+						.text-slide.text-xs-center
+							h3 Story
+							h5 I'm metioning stories here
+							p Origin Story
+							p Prototyping Story
+						.text-slide.text-xs-center
+							h3 Analogy
+							h5 mention a relatable analogy
+							p Something like ( we're a wireless audio company )
+							p Using Metaphor Helps
+						.text-slide.text-xs-center
+							h3 Product
+							h5 What is the product ?
+							p Describe the product in 140 characters.
+							p 3 Reinforcement points
+						.text-slide.text-xs-center
+							h3 Market
+							h5 What is the target market ?
+							p Whom are we targeting.
+						.text-slide.text-xs-center
+							h3 Making Money
+							h5 How will we make money ?
+							p We'll make money via 3rd party integration. API Renting.
+						.text-slide.text-xs-center
+							h3 Company
+							h5 Who is behind the company ?
+							p Mention the founder and staff of the company
+						.text-slide.text-xs-center
+							h3 Competitors
+							h5 Who are the competitors ?
+							p List of competitors and their vision. How is ours different.
+						.text-slide.text-xs-center
+							h3 Competitive Advantage
+							h5 What is the competitive advantage we have ?
+							p Explain the competitive advantage we have over our competitors
+			br
+			br
+			.row.description
+				.col-xs-12.text-xs-center.hidden-sm-down
+					p
+						strong hint :
+						|  open the same page on mobile 
+				.col-xs-12.text-xs-center.hidden-sm-up
+					p
+						strong hint :
+						|  Use the navigation buttons or swipe the slides, open the same page on website and check the sync.

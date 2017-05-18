@@ -1,0 +1,36 @@
+extends ../../layout
+append css
+	link(rel='stylesheet', href='../../css/projects/troops/style.css')
+append js
+	script(src='../../components/SoundManager2/script/soundmanager2.js')
+	script(src='../../js/projects/troops/app.js')
+block content
+	.projects
+		.container
+			.row
+				.col-xs-12
+					.row.flex-items-xs-middle
+						.col-xs-6
+							h1 Troops Music Player
+							p play synchronised music
+						.col-xs-6.text-xs-right
+							a.btn.btn-primary(href="/project/troops") Project 
+								span.fa.fa-link
+			br
+			.row
+				.col-xs-4
+					.music-player
+						.row
+							.col-xs-12
+								.progress
+									.progress-bar
+						.row.flex-items-xs-middle
+							.col-xs-2.text-xs-center
+								button.btn.btn-link
+									span.fa.fa-chevron-left
+							.col-xs-8.text-xs-center
+								button.btn.btn-link.playpause
+									span.fa.fa-play
+							.col-xs-2.text-xs-center
+								button.btn.btn-link
+									span.fa.fa-chevron-right

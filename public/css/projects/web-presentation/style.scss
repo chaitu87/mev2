@@ -1,0 +1,39 @@
+@import '../../variables';
+.webpresentation{
+	// margin: 200px 0;
+}
+.text-slide{
+	padding: 100px 0 20px 0;
+	h3{
+		text-transform: uppercase;
+		display: inline-block;
+		border-bottom: 2px solid $accent;
+		margin-bottom: 20px;
+	}
+	h5{
+		padding: 0 20px;
+	}
+	p{
+		padding: 0 20px;
+	}
+}
+.owl-carousel{
+	text-align: center;
+	.owl-nav{
+		.owl-prev{
+			font-size: 1.5em;
+			display: inline-block;
+			&:before{
+				content: '< ';
+			}
+		}
+		.owl-next{
+			margin-left: 50px;
+			font-size: 1.5em;
+			display: inline-block;
+			&:after{
+				content: ' >';
+			}
+		}
+	}
+}

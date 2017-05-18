@@ -1,0 +1,26 @@
+@import 'variables';
+.blog-hero {
+	vertical-align: middle;
+	background-color: $white;
+	color: $purple;
+	ul {
+		list-style: none;
+		text-align: center;
+		li {
+			display: inline-block;
+			padding: 0 20px;
+			a {
+				color: $purple;
+			}
+		}
+	}
+	.intro {
+		padding: 120px 0;
+	}
+}
+.login-page{
+	margin-top: 50px;
+	.login-form{
+
+	}
+}

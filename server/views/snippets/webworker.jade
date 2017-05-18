@@ -1,0 +1,19 @@
+extends ../layout
+append css
+	link(rel='stylesheet', href='../css/snippets/webworker.css')
+append js
+	script(src='../js/snippets/webworker/app.js')
+block content
+	.snippets
+		.container
+			.row
+				.col-xs-12
+					h1 HTML5 Background Worker
+					p Using primarily for web notification for both offline &amp; online
+					h2.counter
+					button.btn.btn-primary.btn-sm.btn-start Start Worker
+					button.btn.btn-danger.btn-sm.btn-stop Stop Worker
+			br
+			.row
+				.col-xs-12
+					button.btn.btn-primary.btn-send-notification send notification
