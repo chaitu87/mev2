@@ -23,7 +23,8 @@ module.exports = function (grunt) {
           'public/css/app.css': 'public/css/app.scss',
           'public/css/projects/troops/style.css': 'public/css/projects/troops/style.scss',
           'public/css/projects/web-presentation/style.css': 'public/css/projects/web-presentation/style.scss',
-          'public/css/snippets/webworker.css': 'public/css/snippets/webworker.scss'
+          'public/css/snippets/webworker.css': 'public/css/snippets/webworker.scss',
+          'public/css/articles/style.css': 'public/css/articles/style.scss'
         }
       }
     },

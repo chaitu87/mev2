@@ -4,7 +4,6 @@ var auth = require('./auth'),
 module.exports = function(app) {
     app.get('/register', controllers.users.getRegister);
     app.post('/register', controllers.users.createUser);
-
     app.post('/login', auth.login);
     app.get('/logout', auth.logout);
     app.get('/login', controllers.users.getLogin);
@@ -34,8 +33,16 @@ module.exports = function(app) {
     app.get('/snippets', function(req, res, next) {
         res.render('snippets');
     });
-
     app.get('/snippet/webworker', function(req, res, next) {
         res.render('snippets/webworker');
+    });
+    app.get('/articles', function(req, res, next) {
+        res.render('articles/list');
+    });
+    app.get('/article', function(req, res, next) {
+        res.render('article/view');
+    });
+    app.get('/admin', function(req, res, next) {
+        res.render('admin/index', { currentUser: req.user });
     });
 };
