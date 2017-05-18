@@ -1,5 +1,8 @@
 var auth = require('./auth'),
-    controllers = require('../controllers');
+    controllers = require('../controllers'),
+    mongoose = require('mongoose');
+require('../data/Models/Article');
+var Article = mongoose.model('Article');
 
 module.exports = function(app) {
     app.get('/register', controllers.users.getRegister);
@@ -37,7 +40,13 @@ module.exports = function(app) {
         res.render('snippets/webworker');
     });
     app.get('/articles', function(req, res, next) {
-        res.render('articles/list');
+        Article.find(function(err, articles) {
+            if (err) return next(err);
+            res.render('articles/list', {
+                title: 'The Night Captain',
+                articles: articles
+            });
+        });
     });
     app.get('/article', function(req, res, next) {
         res.render('article/view');

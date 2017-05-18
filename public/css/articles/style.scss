@@ -1,4 +1,26 @@
 @import '../variables';
 .articles{
 	margin-top: 30px;
+	h1{
+		margin-bottom: 20px;
+	}
+	.listing{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		.article-title{
+			font-size: 2em;
+			&:hover{
+				cursor: pointer;
+				border: 0;
+			}
+		}
+		.short-description{
+			color: $lgrey;
+			font-size: 1em;
+		}
+		li{
+			margin-bottom: 20px;
+		}
+	}
 }

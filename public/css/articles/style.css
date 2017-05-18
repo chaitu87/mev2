@@ -127,5 +127,21 @@ a {
 
 .articles {
   margin-top: 30px; }
+  .articles h1 {
+    margin-bottom: 20px; }
+  .articles .listing {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .articles .listing .article-title {
+      font-size: 2em; }
+      .articles .listing .article-title:hover {
+        cursor: pointer;
+        border: 0; }
+    .articles .listing .short-description {
+      color: #A7A7A7;
+      font-size: 1em; }
+    .articles .listing li {
+      margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */
