@@ -41,10 +41,22 @@ module.exports = function(app) {
     });
     app.get('/articles', function(req, res, next) {
         Article.find(function(err, articles) {
+            console.log(articles);
             if (err) return next(err);
             res.render('articles/list', {
                 title: 'The Night Captain',
                 articles: articles
+            });
+        });
+    });
+    app.post('/articles', function(req, res, next) {
+        var payload = req.body;
+        console.log(payload);
+        Article.create(payload, function(err) {
+            console.log('created');
+            if (err) return next(err);
+            res.json({
+                message: req.body
             });
         });
     });

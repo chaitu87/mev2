@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 var ArticleSchema = new Schema({
     	title: String,
         slug: String,
-        blog: String,
+        body: String,
         shortdesc: String
 });
 

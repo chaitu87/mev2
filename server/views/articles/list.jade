@@ -11,16 +11,6 @@ block main-content
 					h1 Articles
 					ul.listing
 						each article in articles
-							h1 #{article.title}
-						li
-							a.article-title(href="#") The first sample blog
-							p.short-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-						li
-							a.article-title(href="#") The first sample blog
-							p.short-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-						li
-							a.article-title(href="#") The first sample blog
-							p.short-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-						li
-							a.article-title(href="#") The first sample blog
-							p.short-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+							li
+								a.article-title(href="/article/#{article.slug}") #{article.title}
+								p.short-description #{article.shortdesc}
