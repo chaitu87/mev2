@@ -18,12 +18,11 @@ module.exports = function(app, config) {
     app.use(express.static(config.rootPath + '/public'));
 
     app.use('/admin', function (req, res, next) {
-      if (!auth.isInRole('admin')(req, res, next)) {
+      if (!req.user) {
         req.session.error = 'You are not authorized!';
         res.redirect('/');
         return;
       }
-
       next();
     });
 

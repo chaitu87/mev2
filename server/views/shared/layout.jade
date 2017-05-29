@@ -26,6 +26,9 @@ html(lang='en')
 								a(href="/snippets") Snippets
 							li
 								a(href="/articles") Articles
+							if(currentUser)
+								li
+									a(href="/admin") Admin
 		.maincontent
 			block main-content
 		#sidebar
