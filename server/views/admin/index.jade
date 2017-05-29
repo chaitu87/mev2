@@ -5,4 +5,26 @@ block main-content
 		.container
 			.row
 				.col-md-12
-					h1 Admin Functions
+					br
+					.clearfix
+						.float-left
+							h1 Articles
+						.float-right
+							button.btn.btn-primary Create
+					br
+					table.table
+						thead
+							tr
+								td Title
+								td Status
+								td.text-right Action
+						tbody
+							each article in articles
+								tr
+									td
+										a(href="/article/#{article.slug}") #{article.title}
+									td
+										span.fa.fa-check
+									td.text-right
+										a(href="/edit/#{article._id}").btn.btn-sm.btn-primary Edit
+										button.btn.btn-sm.btn-danger Delete

@@ -1,0 +1,25 @@
+extends ../shared/layout
+append css
+	link(rel='stylesheet', href='../css/articles/style.css')
+append js
+	script(src='../js/articles/app.js')
+block main-content
+	.articles
+		.container
+			.row
+				.col-md-12
+					h1 Edit Article
+					form(action="/article/#{article._id}",method="POST")
+						.form-group
+							label Article Title
+							input.form-control(type="text",value="#{article.title}",name="title")
+						.form-group
+							label Article Body
+							textarea.form-control(rows="3",name="body") #{article.body}
+						.form-group
+							label Article Body
+							textarea.form-control(rows="3",name="shortdesc") #{article.shortdesc}
+						.clearfix
+							.float-left
+							.float-right
+								button(type="submit").btn.btn-primary Save

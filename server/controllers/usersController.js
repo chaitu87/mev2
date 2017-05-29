@@ -65,7 +65,7 @@ module.exports = {
     },
     getLogin: function (req, res, next) {
         if (req.user) {
-            res.redirect('/');
+            res.redirect('/admin');
         }
         else {
             res.render('users/login');

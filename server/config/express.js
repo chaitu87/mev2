@@ -20,7 +20,7 @@ module.exports = function(app, config) {
     app.use('/admin', function (req, res, next) {
       if (!req.user) {
         req.session.error = 'You are not authorized!';
-        res.redirect('/');
+        res.redirect('/login');
         return;
       }
       next();

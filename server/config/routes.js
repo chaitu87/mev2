@@ -60,10 +60,42 @@ module.exports = function(app) {
             });
         });
     });
-    app.get('/article', function(req, res, next) {
-        res.render('article/view');
+    app.post('/article/:id', function(req, res, next) {
+        var payload = req.body;
+        console.log(payload);
+        Article.findById(req.params.id,function(err, blog){
+            blog.title = payload.title;
+            blog.body = payload.body;
+            blog.shortdesc = payload.shortdesc;
+            blog.save(function(err, updatedArticle){
+                res.render('articles/edit',{article: updatedArticle});
+            })
+        });
+    });
+    app.get('/article/:slug', function(req, res, next) {
+        Article.find({
+            slug: req.params.slug
+        },function(err, data){
+            console.log(data);
+            res.render('article/view',{article: data});
+        });
+    });
+    app.get('/edit/:id', function(req, res, next) {
+        Article.find({
+            _id: req.params.id
+        },function(err, data){
+            console.log(data);
+            res.render('articles/edit',{article: data[0]});
+        });
     });
     app.get('/admin', function(req, res, next) {
-        res.render('admin/index', { currentUser: req.user });
+        Article.find(function(err, articles) {
+            console.log(articles);
+            if (err) return next(err);
+            res.render('admin/index', {
+                articles: articles,
+                currentUser: req.user
+            });
+        });
     });
 };
