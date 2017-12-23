@@ -146,6 +146,8 @@ a {
 
 .article h1 {
   color: #FF4081; }
+.article p {
+  font-size: 1em; }
 
 .homepagearticles ul {
   list-style: none; }
