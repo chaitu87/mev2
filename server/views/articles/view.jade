@@ -4,8 +4,11 @@ append css
 append js
 	script(src='../js/articles/app.js')
 block main-content
-	.articles
+	.article
 		.container
 			.row
 				.col-xs-12
+					h1= article.title
+					.article-body
+						| #{article.body}
 					

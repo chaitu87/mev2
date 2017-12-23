@@ -144,4 +144,7 @@ a {
     .articles .listing li {
       margin-bottom: 20px; }
 
+.homepagearticles ul {
+  list-style: none; }
+
 /*# sourceMappingURL=style.css.map */
