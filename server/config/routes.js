@@ -1,8 +1,20 @@
 var auth = require('./auth'),
     controllers = require('../controllers'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    marked = require('marked');
 require('../data/Models/Article');
 var Article = mongoose.model('Article');
+
+marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: true,
+    pedantic: false,
+    sanitize: true,
+    smartLists: true,
+    smartypants: false
+});
 
 module.exports = function (app) {
     app.get('/register', controllers.users.getRegister);
@@ -87,6 +99,7 @@ module.exports = function (app) {
             slug: req.params.slug
         }, function (err, data) {
             console.log(data);
+            data.body = marked(data.body);
             res.render('articles/view', {
                 article: data
             });

@@ -3,7 +3,8 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
     auth = require('./auth'),
-    passport = require('passport');
+    passport = require('passport'),
+    marked = require('marked');
 
 module.exports = function(app, config) {
     app.set('view engine', 'jade');

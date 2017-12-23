@@ -8,4 +8,8 @@ $(function() {
         distanceX: '70%',
         enableEscapeKey: true
     });
+    if ($('#articlebody').length > 0) {
+        // Only on article edit page
+        var simplemde = new SimpleMDE({ element: $("#articlebody")[0] });
+    }
 });

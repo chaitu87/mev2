@@ -1,12 +1,13 @@
 {
-	"name": "mev2",
-	"description": "personal portfolio + blog",
-	"version": "0.0.0",
-	"dependencies": {
-		"bootstrap": "v4.0.0-alpha.6",
-		"jquery": "3.1.1",
-		"scotchPanels": "scotch-panels#^1.0.3",
-		"owl.carousel": "^2.2.0",
-		"SoundManager2": "soundmanager2#*"
-	}
+  "name": "mev2",
+  "description": "personal portfolio + blog",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "jquery": "3.1.1",
+    "scotchPanels": "scotch-panels#^1.0.3",
+    "owl.carousel": "^2.2.0",
+    "SoundManager2": "soundmanager2#*",
+    "simplemde": "^1.11.2"
+  }
 }

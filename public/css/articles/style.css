@@ -144,6 +144,9 @@ a {
     .articles .listing li {
       margin-bottom: 20px; }
 
+.article h1 {
+  color: #FF4081; }
+
 .homepagearticles ul {
   list-style: none; }
 
