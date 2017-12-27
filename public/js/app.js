@@ -12,4 +12,7 @@ $(function() {
         // Only on article edit page
         var simplemde = new SimpleMDE({ element: $("#articlebody")[0] });
     }
+    $('pre code').each(function (i, block) {
+        hljs.highlightBlock(block);
+    });
 });
