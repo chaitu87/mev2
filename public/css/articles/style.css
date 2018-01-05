@@ -149,7 +149,7 @@ a {
 .article p {
   font-size: 1em; }
 
-.homepagearticles ul {
-  list-style: none; }
+.homepagearticles .article {
+  text-align: left; }
 
 /*# sourceMappingURL=style.css.map */

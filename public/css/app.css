@@ -294,8 +294,8 @@ a {
 .article p {
   font-size: 1em; }
 
-.homepagearticles ul {
-  list-style: none; }
+.homepagearticles .article {
+  text-align: left; }
 
 .hljs {
   display: block;
@@ -303,7 +303,8 @@ a {
   padding: 1em;
   font-size: 0.8em;
   background: #282a36;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-top: 1em; }
 
 .hljs-built_in,
 .hljs-selector-tag,

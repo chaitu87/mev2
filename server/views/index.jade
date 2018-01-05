@@ -1,6 +1,6 @@
 extends shared/layout
 block main-content
-	.blog-hero
+	.blog-hero.invisible
 		.container
 			.row
 				.col-md-12.text-center
@@ -27,9 +27,8 @@ block main-content
 		.row
 			.col-md-12.col-xs-12.text-center
 				.homepagearticles
-					ul
-						each article in articles
-							li
-								a(href="/article/#{article.slug}")
-									| #{article.title}
-								p #{article.shortdesc}
+					each article in articles
+						.article.card.col-md-6
+							a(href="/article/#{article.slug}")
+								| #{article.title}
+							p #{article.shortdesc}
